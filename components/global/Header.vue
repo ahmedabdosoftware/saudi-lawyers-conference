@@ -31,10 +31,9 @@
     temporary 
     right
     class="mobile-drawer"
-    style="top: 0; height: 100vh; z-index: 3000;"
+    style="position: fixed; height: 100vh; z-index: 3000; top: 0"
     disable-resize-watcher
     disable-route-watcher
-    absolute
   >
     <!-- Close Button -->
     <div class="close-btn-container">
@@ -128,9 +127,12 @@ onBeforeUnmount(() => {
 
 /* Mobile drawer style */
 .mobile-drawer {
-  background-color: #f5f5f5; /* Light background */
-  color: #333;
-  position: absolute;
+  background-image: url('/assets/bgEvent.png');
+    background-size: cover;
+    background-position: center;
+    color: white;
+    position: fixed;
+    left: 0px;
 }
 
 /* Drawer close button container */
@@ -142,7 +144,8 @@ onBeforeUnmount(() => {
 
 /* Close button style */
 .close-btn {
-  color: #333;
+  background-color: #020228;
+  color: white;
 }
 
 /* List item text start from left (for Arabic) */
