@@ -1,11 +1,48 @@
 @use 'variables' as *;
 
-body {
-//   font-family: $font-main;
-//   background-color: $secondary-color;
-//   color: #333;
-}
 
-.line-made{
-    color: $primary-color;
+  // line
+  .line-made{
+      color: $primary-color;
+    }
+
+  /* Animations */
+  .fade-slide-down-enter-active,
+  .fade-slide-up-enter-active {
+    transition: all 1s ease;
+  }
+  
+  .fade-slide-down-enter,
+  .fade-slide-up-enter {
+    opacity: 0;
+  }
+  
+  .fade-slide-down-enter {
+    transform: translateY(-30px);
+  }
+  
+  .fade-slide-up-enter {
+    transform: translateY(30px);
+  }
+  
+  /* Fade for socials */
+  .fade-enter-active, .fade-leave-active {
+    transition: opacity 0.5s;
+  }
+  .fade-enter, .fade-leave-to {
+    opacity: 0;
+  }
+  
+  /* Bounce for Arrow */
+  .bounce {
+    animation: bounce 2s infinite;
+  }
+  
+  @keyframes bounce {
+    0%, 100% {
+      transform: translateY(0);
+    }
+    50% {
+      transform: translateY(10px);
+    }
   }

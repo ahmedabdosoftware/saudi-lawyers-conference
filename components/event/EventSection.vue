@@ -5,7 +5,7 @@
           <v-row class="fill-height" align="center" justify="center">
   
             <!-- main-slider -->
-            <v-col cols="12" md="7" class="slider-section">
+            <v-col cols="12" md="7" class="slider-section" order="2" order-md="1">
               <div class="main-slider">
   
              <!--main-image-->
@@ -56,7 +56,14 @@
             </v-col
   
             <!-- info section -->
-            <v-col cols="12" md="5" class="info-section">
+            <v-col cols="12" md="5" class="info-section" order="1" order-md="2">
+                <div class="mobile-phrase-image-wrapper">
+                    <v-img
+                        src="/assets/aboutEventMobile.svg"
+                        class="phrase-image-mobile"
+                        style="width: 120px; height: 20px;"
+                    ></v-img>
+                </div>
                <div class="content-event">  
                    <div class="countdown">
                        <div class="time-box time" v-for="(item, index) in countdown" :key="index">
@@ -82,15 +89,15 @@
                     ></v-img>
                 </div>
             </div>
+            </v-col>
+        </v-row>
+        <v-row class="cont-slide-number">
             <div class="slide-number">
                 <p> 
                     {{ currentIndex + 1 }}<span>__</span>  {{ slides.length }}
                 </p>
             </div>
-  
-            </v-col>
-
-          </v-row>
+        </v-row>
         </v-container>
       </div>
     </section>
@@ -326,6 +333,10 @@
 
   
 }
+.mobile-phrase-image-wrapper {
+  display: none !important;
+  margin-bottom: 16px;
+}
 
 .phrase-image {
   width: 100%;
@@ -378,23 +389,30 @@
     color: white;
     font-weight: bold;
 }
-.slide-number{
+.cont-slide-number{
+
     //   background-color: #5D5FEF;
-      margin-top:20px;
-      display:block !important;
-      padding-right:60px;
-      span{
-          color: #19195a;
-          margin:5px;
+      display:flex;
+      justify-content: flex-end;
+      align-items: center;
 
-      }
 
-  }
-  @media (max-width: 768px) {
-    .main-image {
-     width: 80%;
+      .slide-number{
+          //   background-color: #5D5FEF;
+            margin-top:20px;
+            display:block !important;
+            padding-right:60px;
+            p{
+                color:white;
+                span{
+                    margin:5px;
+                    color: #19195a !important;
+                }
+      
+            }
+      
+        }
 }
-
 .small-image {
   width: 200px;
 }
@@ -402,6 +420,23 @@
     padding: 5px;
     font-size:15px;
 }
+  @media (max-width: 768px) {
+    .slide-number{
+          //   background-color: #5D5FEF;
+            margin-top:0px !important;
+            margin-bottom:15px !important;
+        }
+    .main-image {
+     width: 80%;
+    }
+    .phrase-image-wrapper {
+    display: none; 
+  }
+
+  .mobile-phrase-image-wrapper {
+    display: flex !important; 
+  }
+
 }
   </style>
   
