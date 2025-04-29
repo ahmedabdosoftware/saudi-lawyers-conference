@@ -4,9 +4,11 @@
         <!-- title row-->
         <div class="title-row">
           <div class="section-title">
-            <div class="line"></div>
-            <h2><span class="line-made">---- </span>تواصل معنا<span class="line-made"> ----</span></h2>
-            <div class="line"></div>
+            <v-img
+                src="/assets/contactTitle.svg"
+                class="phrase-image-mobile"
+                style="width: 200px; height: 30px;"
+            ></v-img>
           </div>
         </div>
 
@@ -147,11 +149,7 @@
     flex-direction: column;
     gap: 50px;
   }
-  .title-row {
-  width: 100%;
-  display: flex;
-  justify-content: center;
-}
+
 .content-row {
   width: 100%;
   display: flex;

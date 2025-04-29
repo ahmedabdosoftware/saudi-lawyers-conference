@@ -37,7 +37,11 @@
   .bounce {
     animation: bounce 2s infinite;
   }
-  
+  .title-row {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+  }
   @keyframes bounce {
     0%, 100% {
       transform: translateY(0);
@@ -46,3 +50,16 @@
       transform: translateY(10px);
     }
   }
+  // text error
+  .text-error {
+    color: red;
+  }
+  // Reset styles
+  .v-expansion-panel,
+  .v-expansion-panels,
+  .v-expansion-panel-title,
+  .v-expansion-panel-text,
+  .faq-panel-title{
+    background-color: transparent !important;
+
+}

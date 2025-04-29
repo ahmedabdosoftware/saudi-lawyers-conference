@@ -2,8 +2,17 @@
     <section class="faq-section">
       <div class="overlay-background">
         <v-container fluid class="pa-6">
-          <h2  class="faq-title text-center mb-10"><span class="line-made">---- </span>  الأسئلة المتكررة <span class="line-made"> ----</span></h2>
+           <!-- title row-->
+          <div class="title-row">
+            <div class="section-title">
+              <v-img
+                  src="/assets/fqsTitle.svg"
+                  class="phrase-image-mobile"
+                  style="width: 200px; height: 30px;"
+              ></v-img>
+            </div>
 
+          </div>
           <v-expansion-panels
             v-model="panel"
             accordion
@@ -50,14 +59,7 @@
   </script>
   
   <style scoped lang="scss">
-     .v-expansion-panel,
-     .v-expansion-panels,
-     .v-expansion-panel-title,
-     .v-expansion-panel-text,
-     .faq-panel-title{
-    background-color: transparent !important;
 
-  }
   .faq-section {
     position: relative;
     overflow: hidden;
@@ -129,7 +131,9 @@
     justify-content: center;
     transition: 0.3s;
   }
-  
+  ::v-deep(.v-expansion-panel-title__icon){
+    display: none;
+  }
   .arrow-circle v-icon {
     color: #fff;
     font-size: 24px;
@@ -146,8 +150,5 @@
     text-align: right;
   }
   
-  .text-error {
-    color: red;
-  }
   </style>
   

@@ -75,9 +75,11 @@
                         مؤتمر المحامين 2024 هو الحدث الأبرز للمحامين والقانونيين في السعودية
                         يجمع المؤتمر نخبة من المتخصصين والخبراء لمناقشة أحدث التطورات القانونية وتبادل الخبرات.
                     </p>
-                    <v-btn color="primary" class="learn-more-btn">
-                        معرفة المزيد
-                    </v-btn>
+                    <div class="cont-learn-more-btn">
+                      <v-btn color="primary" class="learn-more-btn">
+                          معرفة المزيد
+                      </v-btn>
+                    </div>
                </div>
                 <!-- phrase-image -->
                 <div class="phrase-image-wrapper">
@@ -94,7 +96,7 @@
         <v-row class="cont-slide-number">
             <div class="slide-number">
                 <p> 
-                    {{ currentIndex + 1 }}<span>__</span>  {{ slides.length }}
+                    0{{ currentIndex + 1 }}<span>__</span>  0{{ slides.length }}
                 </p>
             </div>
         </v-row>
@@ -232,16 +234,16 @@
 .image-overlay {
     width:100%;
     height:100%;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  background-color: rgba(4, 4, 46, 0.5);  
-  padding: 20px;
-  border-radius: 10px;
-  text-align: center;
-  color: white;
-  z-index: 3;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: rgba(4, 4, 46, 0.5);  
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
+    color: white;
+    z-index: 3;
 }
 .image-title {
   position: absolute;
@@ -383,7 +385,7 @@
     margin-bottom: 30px;
     text-align: end;
   }
-  
+
   .learn-more-btn {
     background-color: #5D5FEF;
     color: white;
@@ -421,22 +423,34 @@
     font-size:15px;
 }
   @media (max-width: 768px) {
-    .slide-number{
-          //   background-color: #5D5FEF;
-            margin-top:0px !important;
-            margin-bottom:15px !important;
-        }
+  .slide-number{
+    //   background-color: #5D5FEF;
+      margin-top:0px !important;
+      margin-bottom:15px !important;
+      }
     .main-image {
      width: 80%;
     }
     .phrase-image-wrapper {
-    display: none; 
-  }
+     display: none; 
+    }
 
   .mobile-phrase-image-wrapper {
     display: flex !important; 
+    margin-top: 15px;
+    margin-bottom: 30px;
   }
-
+  .cont-learn-more-btn{
+    display: flex;
+    justify-content: center;
+    width: 100%;
+  }
+  .cont-slide-number{
+    justify-content: center;
+    .slide-number{
+            padding-right:0px;
+        }
+  }
 }
   </style>
   
